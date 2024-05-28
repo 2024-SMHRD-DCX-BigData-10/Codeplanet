@@ -14,5 +14,10 @@
 	<h2> 이지현</h2>
 	<h2> 현대김</h2>
 	<h2> 유진 </h2>
+	<fieldset>
+	<h1>로그인실패</h1>
+	<a href="Main.html"><button >메인</button></a> 
+	<a href="Login.html"><button>로그인</button></a> 
+</fieldset>
 </body>
 </html>
