@@ -19,7 +19,7 @@
   
   <!-- 로그인 -->
   <select id="login" parameterType="MemberDTO" resultType="MemberDTO">
-		select * from members where MEM_ID=#{id} and MEM_PW=#{pw}
+		select * from members where mem_id=#{id} and mem_pw=#{pw}
 	</select>
 	
 	<!-- 회원정보수정 -->

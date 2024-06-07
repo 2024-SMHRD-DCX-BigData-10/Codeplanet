@@ -33,9 +33,11 @@ public class LoginCon implements Command {
 				//로그인 메소드->MemberDAO에서 생성
 				// 결과값 받아옴 = user_info로
 				MemberDTO user_info= new MemberDAO().login(dto);
-				
+				System.out.println(user_info);
 				//5 페이지 이동
 				String moveURL;
+				
+
 				if(user_info != null) {
 					System.out.println("로그인 성공!");
 					

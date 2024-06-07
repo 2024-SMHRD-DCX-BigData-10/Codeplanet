@@ -36,9 +36,9 @@ public class MemberDAO {
 	//sql : select * from web_member where id=? and pw=?
 	public MemberDTO login(MemberDTO dto) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		MemberDTO user_info= session.selectOne("login",dto); //login 기능을 mapper에서 정의해줌.
+		MemberDTO user_info= session.selectOne("login", dto); //login 기능을 mapper에서 정의해줌.
 		session.close();
-		
+		System.out.println("멤버DAO의"+user_info);
 		return user_info;
 	}
 
