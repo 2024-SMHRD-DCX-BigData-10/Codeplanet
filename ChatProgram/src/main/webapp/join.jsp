@@ -1,5 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,9 @@
 <link rel="stylesheet" href="join.css">
 </head>
 <body>
-	
     <div class="container">
         <h1>농사의 고수에 오신 것을 환영합니다</h1>
-        <form action="main.html">
+        <form action="main.jsp">
             <label for="id">아이디</label> 
             <input type="text" id="id" name="id">
             

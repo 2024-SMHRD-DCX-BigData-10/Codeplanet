@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -11,7 +12,7 @@
 		<div id="logo">
 			<img src="img/logo2.png" alt="로고이미지">
 		</div> 
-			<form action="main.html" class="login-form">
+			<form action="main.jsp" class="login-form">
 			<label for="id">아이디</label> 
 			<input type="text" id="id" name="id">
 			<label for="password">비밀번호</label> 
@@ -25,7 +26,7 @@
 		</form>
 		<div class="register">
 			<p>
-				아직 농고 회원이 아니세요? <a href="join.html">회원가입 하기</a>
+				아직 농고 회원이 아니세요? <a href="join.jsp">회원가입 하기</a>
 			</p>
 		</div>
 	</div>
