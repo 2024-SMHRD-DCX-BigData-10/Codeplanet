@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+  <mapper namespace="com.smhrd.mapper.MemberMapper">
+  	<!-- #{필드명} -->
+  	
+  	<!-- 회원가입 -->
+  	<insert id="join" parameterType="MemberDTO">
+  		insert into members values(#{id},#{pw},#{name},#{phone},#{address},#{nick},#{birth},#{gender},#{type},#{join})
+  	
+  	</insert>
+  	
+  	<!-- 아이디 중복체크 -->
+  	<select id="idCheck" parameterType="String" resultType="String">
+  		select email from web_member where email = #{email}
+  	</select>
+  
+  <!-- 로그인 -->
+  <select id="login" parameterType="MemberDTO" resultType="MemberDTO">
+		select * from members where MEM_ID=#{id} and MEM_PW=#{pw}
+	</select>
+	
+	<!-- 회원정보수정 -->
+	<update id="update">
+		update web_member set pw=#{pw},tel=#{tel},address=#{address}
+		where email=#{email}
+	</update>
+	
+	<!-- 전체회원조회 -->
+	<select id="selectMember" resultType="MemberDTO">
+		select * from web_member 
+	</select>
+	
+	<!-- 회원정보삭제 -->
+	<delete id="delete">
+		delete from web_member where email=#{email}
+	</delete>
+  </mapper>
+  
+  
+  
+  
+  
