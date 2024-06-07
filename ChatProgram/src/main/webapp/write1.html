@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>글쓰기</title>
+<style>
+    table {
+        width: 500px;
+        height: 0px;
+        margin: auto;
+        background-color: white;
+        border-radius: 15px;
+        outline: none;
+        padding-left: 10px;
+    }
+    input[type="text"] {
+        border: 1.5px yellow solid;
+        width: 500px;
+        height: 30px;
+        border-radius: 5px;
+        padding-left: 10px;
+    }
+    textarea {
+        border: 1.5px yellow solid;
+        width: 500px;
+        height: 400px;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        resize: none;
+    }
+    .header {
+        height: 30px;
+    }
+    input[type="submit"] {
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        border: 0;
+        outline: 1.5px rgb(85, 155, 36) solid;
+        border-radius: 5px;
+        padding-left: 10px;
+        background-color: yellow;
+    }
+    input[type="submit"]:active {
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        border: 0;
+        border-radius: 5px;
+        outline: 1.5px yellow solid;
+        padding-left: 10px;
+        background-color: rgb(85, 155, 36);
+    }
+</style>
+</head>
+<body bgcolor='lightgray'>
+<form action="board1.html" method="post">
+<table> 
+    <tr><td><h2>글쓰기</h2></td></tr>
+    <tr><td class="header">Title</td></tr>
+    <tr><td><input type="text" placeholder="제목을 입력하세요" name="title"></td></tr>
+    <tr><td class="header">Comment</td></tr>
+    <tr><td><textarea placeholder="내용을 입력하세요" name="detail"></textarea></td></tr>
+    <tr><td><form action="http://localhost/upload.php" method="post" enctype="multipart/form-data"></form>
+    <input type="file" name="profile"></td></tr>
+    <tr><td><input type="submit" value="등록" onclick="alert('작성 완료!')"></td></tr>
+</form>
+</body>
+</html>
