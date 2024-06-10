@@ -9,6 +9,8 @@
 <link rel="apple-touch-icon" href="img/logo.png">
 <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
 </head>
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
 <body>
     <div class="header">
         <div class="logo">농사의 고수
