@@ -16,30 +16,31 @@ public class UpdateCon implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		//데이터 꺼내오기
-		String id= request.getParameter("id");
-		String pw= request.getParameter("pw");
-		String name= request.getParameter("name");
-		String phone= request.getParameter("phone");
-		String address= request.getParameter("address");
-		String nick= request.getParameter("nick");
-		String birth= request.getParameter("birth");
-		String type= request.getParameter("type");
-		String join= request.getParameter("join");
-		String gender= request.getParameter("gender");
-				
-		System.out.println("id : "+id);
-		System.out.println("pw : "+pw);
-		System.out.println("name : "+name);
-		System.out.println("phone : "+phone);
-		System.out.println("address : "+address);
-		System.out.println("nick : "+nick);
-		System.out.println("birth : "+birth);
-		System.out.println("type : "+type);
-		System.out.println("join : "+join);
-		System.out.println("gender : "+gender);
-				
-				//DTO로 묶기
-				MemberDTO dto= new MemberDTO(id, pw, name, phone,address,nick,birth,type,join,gender);
+		String mem_id= request.getParameter("id");
+		String mem_pw= request.getParameter("pw");
+		String mem_name= request.getParameter("name");
+		String mem_phone= request.getParameter("phone");
+		String mem_addr= request.getParameter("address");
+		String mem_nick= request.getParameter("nick");
+		String mem_birthdate= request.getParameter("birth");
+		String mem_type= request.getParameter("type");
+		String joined_at= request.getParameter("join");
+		String mem_gender= request.getParameter("gender");
+		
+		
+		System.out.println("id : "+mem_id);
+		System.out.println("pw : "+mem_pw);
+		System.out.println("name : "+mem_name);
+		System.out.println("phone : "+mem_phone);
+		System.out.println("address : "+mem_addr);
+		System.out.println("nick : "+mem_nick);
+		System.out.println("birth : "+mem_birthdate);
+		System.out.println("type : "+mem_type);
+		System.out.println("join : "+joined_at);
+		System.out.println("gender : "+mem_gender);
+		
+		//3. DTO로 묶기 -> DB에 한 사람에대한 것을 저장해야하기때문에 한 객체로 묶어서 저장한다.
+		MemberDTO dto= new MemberDTO(mem_id, mem_pw, mem_name, mem_phone,mem_addr,mem_nick,mem_birthdate,mem_gender,mem_type,joined_at);
 				
 				//update메소드 호출
 				int row =new MemberDAO().update(dto);
@@ -57,7 +58,7 @@ public class UpdateCon implements Command {
 					
 				}	
 			
-				return "Main.jsp";
+				return "Real_Main.jsp";
 	}
 
 }

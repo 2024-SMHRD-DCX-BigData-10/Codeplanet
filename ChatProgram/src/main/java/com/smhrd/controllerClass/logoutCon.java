@@ -26,7 +26,7 @@ public class logoutCon implements Command {
 		// session.invalidate(); -> 세선종료
 		
 
-		return "Main.jsp";
+		return "Real_Main.jsp";
 	}
 
 }
