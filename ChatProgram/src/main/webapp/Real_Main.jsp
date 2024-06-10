@@ -9,7 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>농사의 고수</title>
 <link rel="stylesheet" href="main.css">
-
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
 </head>
 <body>
 <%
