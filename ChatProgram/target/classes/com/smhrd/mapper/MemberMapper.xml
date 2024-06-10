@@ -8,7 +8,7 @@
   	
   	<!-- 회원가입 -->
   	<insert id="join" parameterType="MemberDTO">
-  		insert into members values(#{id},#{pw},#{name},#{phone},#{address},#{nick},#{birth},#{gender},#{type},#{join})
+  		insert into members values(#{mem_id},#{mem_pw},#{mem_name},#{mem_phone},#{mem_addr},#{mem_nick},#{mem_birthdate},#{mem_gender},#{mem_type},#{joined_at})
   	
   	</insert>
   	
@@ -24,8 +24,8 @@
 	
 	<!-- 회원정보수정 -->
 	<update id="update">
-		update web_member set pw=#{pw},tel=#{tel},address=#{address}
-		where email=#{email}
+		update members set mem_pw=#{mem_pw},mem_phone=#{mem_phone},mem_addr=#{mem_addr}
+		where mem_id=#{mem_id}
 	</update>
 	
 	<!-- 전체회원조회 -->

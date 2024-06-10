@@ -25,9 +25,9 @@ public class MemberDTO {
 	private String mem_addr;
 	private String mem_nick;
 	private String mem_birthdate;
-	private String gender;
-	private String type;
-	private String join;
+	private String mem_gender;
+	private String mem_type;
+	private String joined_at;
 	
 	
 	

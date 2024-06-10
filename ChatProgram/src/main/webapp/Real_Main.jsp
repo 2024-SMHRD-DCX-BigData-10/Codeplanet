@@ -1,3 +1,5 @@
+<%@page import="ch.qos.logback.core.recovery.ResilientSyslogOutputStream"%>
+<%@page import="com.smhrd.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,19 +9,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>농사의 고수</title>
 <link rel="stylesheet" href="main.css">
-<link rel="apple-touch-icon" href="img/logo.png">
-<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+
 </head>
 <body>
+<%
+		//로그인 여부 확인해서 로그아웃 회원정보수정 탭 띄우기
+		MemberDTO user_info = (MemberDTO)session.getAttribute("user_info");
+		System.out.print(user_info);
+%>
 	<div class="header">
 		<div class="logo">농사의 고수
 		<img alt="로고이미지" src="img/logo.png" class="logo-image">
-		</div>
+	</div>
+	<nav>
+		<% if(user_info != null){%>
+					<!--개인정보수정 기능-->
+					<a href="./UpdateMember.jsp">개인정보수정</a>
+					<!-- 업데이트멤버.jsp으로 이동하고 정보수정버튼 누르면 db에있는 정보 가 수정됨 -->
+					<!-- 로그아웃 기능  -->
+					<a href="logoutCon.do">로그아웃</a>
 		
-		<div class="auth">
+		<%}else{ %>
+				<a href="#login">
+				<div class="auth">
 			<a href="Real_Login.jsp">로그인</a> 
 			<a href="Real_Join.jsp">회원가입</a>
-		</div>
+		</div></a>
+		<%} %>
+	</nav>
+	<nav id=login>
+		
+	</nav>
 	</div>
 	<div class="main">
 		<h1>농사의 어려움은 단 한 곳에서 해결하세요</h1>
