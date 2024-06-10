@@ -1,6 +1,7 @@
 package com.smhrd.model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -36,9 +37,9 @@ public class MemberDAO {
 	//sql : select * from web_member where id=? and pw=?
 	public MemberDTO login(MemberDTO dto) {
 		SqlSession session = sqlSessionFactory.openSession(true);
-		MemberDTO user_info= session.selectOne("login", dto); //login 기능을 mapper에서 정의해줌.
-		session.close();
+		MemberDTO  user_info= session.selectOne("login", dto); //login 기능을 mapper에서 정의해줌.
 		System.out.println("멤버DAO의"+user_info);
+		session.close();
 		return user_info;
 	}
 

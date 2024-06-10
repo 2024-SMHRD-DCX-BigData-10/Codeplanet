@@ -18,13 +18,13 @@ import lombok.RequiredArgsConstructor;
 
 public class MemberDTO {
 	
-	@NonNull private String id;
-	@NonNull private String pw;
-	private String name;
-	private String phone;
-	private String address;
-	private String nick;
-	private String birth;
+	@NonNull private String mem_id;
+	@NonNull private String mem_pw;
+	private String mem_name;
+	private String mem_phone;
+	private String mem_addr;
+	private String mem_nick;
+	private String mem_birthdate;
 	private String gender;
 	private String type;
 	private String join;
