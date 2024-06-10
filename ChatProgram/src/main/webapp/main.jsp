@@ -7,6 +7,8 @@
 <title>농사의 고수</title>
 <link rel="stylesheet" href="main.css">
 </head>
+<link rel="apple-touch-icon" href="img/logo.png">
+<link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
 <body>
     <div class="header">
         <div class="logo">농사의 고수
